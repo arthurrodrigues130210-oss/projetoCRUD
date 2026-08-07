@@ -11,8 +11,7 @@ public class UsuarioDao {
     private Connection connection;
 
     public UsuarioDao(Connection connection) {
-        this.connection
-                = new ConnectionMySql().getConnection();
+        this.connection = new ConnectionMySql().getConnection();
     }
 
     public void adicionar(UsuarioModel usuario) {
@@ -24,7 +23,12 @@ public class UsuarioDao {
             ps.setString(2, usuario.getCpf());
             ps.setString(3, usuario.getEmail());
             ps.setString(4, usuario.getTelefone());
-            ps.setString(5, usuario.getNascimento());
+            ps.setDate  (5, usuario.getNascimento());
+            
+            ps.execute();
+            ps.close();
+            
+            JOptionPane.showMessageDialog(null, "Usuário Cadastrado!");
             
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar");

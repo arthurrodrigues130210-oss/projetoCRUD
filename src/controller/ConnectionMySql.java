@@ -8,7 +8,7 @@ public class ConnectionMySql {
     public Connection getConnection(){
         try {
             return DriverManager.getConnection(
-            "jdbc:mysql://localhos3307/projetoCRUD",
+            "jdbc:mysql://localhost:3307/projetoCRUD",
             "root",
             ""); 
         } catch (SQLException e) {
