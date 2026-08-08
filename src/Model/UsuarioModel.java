@@ -1,17 +1,15 @@
 package Model;
 
-
 import java.sql.Date;
 
-
-
 public class UsuarioModel {
-private int idUsurio;
-private String nome;
-private String cpf;
-private String email;
-private String telefone;
-private Date nascimento;
+
+    private int idUsurio;
+    private String nome;
+    private String cpf;
+    private String email;
+    private String telefone;
+    private Date nascimento;
 
     public int getIdUsurio() {
         return idUsurio;
@@ -60,5 +58,5 @@ private Date nascimento;
     public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
-    
+
 }
